@@ -14,6 +14,7 @@
   <script src="{% static 'jquery/sample.js' %}"></script>
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
     body{
       background: url(https://images.unsplash.com/photo-1542810104-c5f07c7357ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60) no-repeat;
       background-size: cover;
@@ -25,11 +26,42 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgba(3,3,3,.8);
+  background-color: rgba(3,3,3,1);
   overflow: hidden;
-  opacity: 0.4;
-  box-shadow: 10px 10px 30px #000;
+  opacity: 0.8;
 }
+.crttitle{
+  padding-top: 4.4px;
+  display: flex;
+}
+.crttitle h3{
+  position: relative;
+  font-size: 2.5vw;
+  color: #252839;
+  -webkit-text-stroke: 0.1vw black;
+  text-transform: uppercase;
+}
+.crttitle h3::before{
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #F7F378;
+      -webkit-text-stroke: 0vw white;
+      /*border-right: 2px solid #CFD3CE;*/
+      overflow: hidden;
+      animation: animate 6s linear infinite;
+    }
+@keyframes animate{
+      0%,10%,100%{
+        width: 0;
+      }
+      70%,90%{
+        width: 100%;
+      }
+    }
 .navbar-custom {
   background-color: rgba(0,0,0,0.3);
 }
@@ -153,6 +185,14 @@ span
   color:#F5F105;
   font-size: 15;
 }
+.homespace{
+  width: 100%;
+  height: 582px;
+  background: url(https://www.flightsafetyaustralia.com/wp-content/uploads/2020/02/bigdata_1.jpg) no-repeat;
+  background-size: cover;
+  height: 89.8vh;
+  background-position: left;
+}
 .box{
   position: relative;
   width: 292px;
@@ -202,7 +242,7 @@ span
   color: #ff0;
 }
 .space{
-  margin-top: 12px;
+  padding-top: 10px;
   margin-left: 30px;
 }
 .space1{
