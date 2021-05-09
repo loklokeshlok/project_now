@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.core.mail import send_mail
 from own import settings
 from datetime import date
+from django.core.mail import send_mail
 
 # Create your views here.
 def home(self):
@@ -13,4 +14,12 @@ def achievment(self):
 	return render(self,'html/achievments.html',{'y':y})
 
 def loginpage(self):
+	if self.method == 'POST':
+		email = self.POST["mail"]
+		subject = "welcome user"
+		message = "thank you for registering."
+		# email_from = settings.EMAIL_HOST_USER
+		# recipient_list = [email,]
+		send_mail(subject,message,'loklokesh9988@gmail.com',['loklokesh9876@gmail.com'],fail_silently=False,)
+		return render(self,'html/test.html')
 	return render(self,'html/login_page.html')
