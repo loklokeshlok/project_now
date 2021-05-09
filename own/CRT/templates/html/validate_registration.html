@@ -1,0 +1,11 @@
+{% extends 'html/main.html' %}
+{% block title %}Success{% endblock %}
+{% block content %}
+
+	<form> 
+		<input type="text" name="number" placeholder="Please Enter Your OTP here : " size="30">
+		<input type="text" name="otpcheck" value="{{ OTP }}">
+		<button>Button</button>
+	</form>
+
+{% endblock %}
