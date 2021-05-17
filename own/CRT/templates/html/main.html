@@ -68,6 +68,58 @@
   font-family: sans-serif;
   font-size: 25px;
 }
+.wrapper1{
+  text-align: center;
+}
+.container1{
+  position: relative;
+  width: 300px;
+  display: flex;
+}
+
+.card1{
+  height: 260px;
+  width: 450px;
+  box-shadow: 0px 30px 60px rgba(0,0,0,0.2);
+}
+#cont1{
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin-left: 45px;
+  position: relative;
+}
+
+#cont1:after{
+  position: absolute;
+  display: block;
+  width: 160px;
+  left: 50%;
+  top: 50%;
+  content: attr(data-pct)"%";
+  margin-top: -80px;
+  margin-left: -80px;
+  line-height: 160px;
+  font-size: 2em;
+  color: #000;
+}
+
+#svg circle{
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #ecf0f1;
+  stroke-width: .4em;
+
+
+}
+
+#svg #bar{
+  stroke: #03A9FA;
+}
+
+.svg_card1{
+  display: block;
+}
 .navbar-custom {
   background-color: #8CA7ED;
 }

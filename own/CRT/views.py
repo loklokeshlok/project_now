@@ -23,3 +23,7 @@ def loginpage(self):
 		send_mail(subject,message,'loklokesh9988@gmail.com',[email,],fail_silently=False,)
 		return render(self,'html/validate_registration.html',{'OTP':a})
 	return render(self,'html/login_page.html')
+
+def progress_page(self):
+	a = {'a':50}
+	return render(self,'html/progress.html',{'a':a})
