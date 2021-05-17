@@ -2,10 +2,13 @@
 {% block title %}Success{% endblock %}
 {% block content %}
 
-	<form> 
+	<form method="POST"> 
+		{% csrf_token %}
 		<input type="text" name="number" placeholder="Please Enter Your OTP here : " size="30">
+		<br>
 		<input type="text" name="otpcheck" value="{{ OTP }}">
-		<button>Button</button>
+		<br>
+		<input type="submit" value="validate">
 	</form>
 
 {% endblock %}
