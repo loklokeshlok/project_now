@@ -13,65 +13,41 @@ body{
   font-family: sans-serif;
 }
 
-.wrapper1{
-  text-align: center;
-}
-
-.container1{
-  position: relative;
-  width: 300px;
-  display: flex;
+.xyz{
+  position: absolute;
+  top: 40%;
+  left: 40%;
 }
 
 .card1{
-  height: 260px;
-  width: 450px;
-  box-shadow: 0px 30px 60px rgba(0,0,0,0.2);
+  height: 200px;
+  background-color: white;
 }
 
-#cont1{
-  display: block;
-  height: 200px;
-  width: 200px;
-  margin-left: 45px;
-  position: relative;
-}
 
 #cont1:after{
-  position: absolute;
-  display: block;
-  width: 160px;
-  left: 50%;
-  top: 50%;
   content: attr(data-pct)"%";
-  margin-top: -80px;
-  margin-left: -80px;
-  line-height: 160px;
   font-size: 2em;
-  color: #000;
 }
 
 #svg1 circle{
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
   stroke: #ecf0f1;
-  stroke-width: .4em;
+  stroke-width: 0.6em;
 
 
 }
 
 #svg1 #bar1{
-  stroke: #03A9FA;
+  stroke: green;
 }
 
-.svg_card1{
-  display: block;
-}
     </style>
     
   </head>
   <body>
-    
+  <div class="xyz">
     <div class="wrapper1">
       <div class="container1">
         <div class="card1">
@@ -83,6 +59,7 @@ body{
           </div>
         </div>
       </div>
+    </div>
   </div>
 
   <script type="text/javascript">

@@ -1,0 +1,57 @@
+{% extends 'html/main.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="abtspace">
+<section class="abtcontact">	
+	<div class="abtcontainer">
+		<div class="abtcontactinfo">
+			<div class="abtbox">
+				<div class="abticon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+				<div class="abttext">
+					<h3>Address</h3>
+					<p>6-8-1236, <br> NGOs colont, <br> Tirupati</p>
+				</div>
+			</div>
+			<div class="abtbox">
+				<div class="abticon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+				<div class="abttext">
+					<h3>Phone</h3>
+					<p>9121047583</p>
+				</div>
+			</div>
+			<div class="abtbox">
+				<div class="abticon"><i class="far fa-envelope"></i></div>
+				<div class="abttext">
+					<h3>Email</h3>
+					<p>loklokesh9876@gmail.com</p>
+				</div>
+			</div>
+		</div>	
+		<div class="abtcontactform">
+			<form>
+				<h2>Send Message</h2>
+				<div class="abtinputbox">
+					<p>Full Name</p>
+					<input type="text" name="" required="required">
+				</div>
+				<br>
+				<div class="abtinputbox">
+					<p>Email</p>
+					<input type="text" name="" required="required">
+				</div>
+				<br>
+				<div class="abtinputbox">
+					<p>Type your Message...</p>
+					<textarea required="required"></textarea>
+				</div>
+				<div class="abtinputbox">
+					<input type="submit" name="" value="Send">
+				</div>
+			</form>
+		</div>	
+	</div>
+</section>
+</div>
+
+{% endblock %}

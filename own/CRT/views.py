@@ -26,4 +26,4 @@ def loginpage(self):
 
 def progress_page(self):
 	a = {'a':50}
-	return render(self,'html/progress.html',{'a':a})
+	return render(self,'html/abtpage.html',{'a':a})
