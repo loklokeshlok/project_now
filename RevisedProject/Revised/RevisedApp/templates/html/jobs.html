@@ -1,0 +1,60 @@
+{% extends 'html/base.html' %}
+{% block title %}Jobs{% endblock %}
+{% block content %}
+<div class="container-fluid mt-4">
+	<div class="row">
+		<div class="col col-md-4 ">
+			<div class="card shadow-lg">
+				<div class="card-body">
+					<h3>Add job</h3>
+					<form method="POST">
+						{% csrf_token %}
+						<table class="table table-borderless">
+							<tr>{{z.as_p}}</tr>
+						</table>
+						<input type="submit" name="Submit" class="btn btn-success col-sm">
+                    </form>
+                </div>
+            </div>
+		</div>
+		<div class="col col-md ">
+			<div class="card shadow-lg">
+				<div class="card-body">  
+					<h3>Jobs table</h3>
+					<table class="table table-borderless">
+						<tr class="bg-dark text-light">
+							<th>Sno</th>
+							<th>Title</th>
+							<th>Location</th>
+							<th>Salary</th>
+							<th>Job Role</th>
+							<th>Actions</th>
+
+						</tr>
+						{% for t in y %}
+						<tr>
+							<td>{{forloop.counter}}</td>
+							<td>{{t.title}}</td>
+							<td>{{t.location}}</td>
+							<td>{{t.salary}}</td>
+							<td>{{t.job_role}}</td>
+							<td colspan="3">
+						<a href="{% url 'editjob' t.id %}" class="btn btn-success">Update</a>
+						<!-- <a href="#" class="btn btn-info">Update</a> -->
+						<a href="#" class="btn btn-danger">Delete</a>
+						
+					</td>
+						</tr>
+						{% endfor %}
+					</table>
+				</div>
+			
+		</div>
+	</div>
+</div>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+{% endblock %}

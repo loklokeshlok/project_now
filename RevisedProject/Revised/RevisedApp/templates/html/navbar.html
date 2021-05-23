@@ -1,0 +1,144 @@
+<nav class="navbar navbar-expand-md navbar-dark navbar-custom">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      {% if not user.is_authenticated %}
+      <pre> </pre>
+      <li class="nav-item">
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'home' %}"><i class="fas fa-home fa-lg"></i></h5></a>
+      </div>
+    </li>
+      <pre>     </pre>
+     <li class="nav-item">
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'about' %}"><strong style="padding-left: 6px;"><i class="fas fa-mobile-alt fa-lg"></i></strong></h5></a>
+      </div>
+    </li>
+    <pre>   </pre>
+    <ul class="navbar-nav ml-auto">
+      
+     </ul>
+     <pre>  </pre>
+     <li class="nav-item">
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'ach' %}"><i class="fas fa-medal fa-lg"></i></i></h5></a>
+      </div>
+    </li>
+         <pre>                       </pre>
+      <li>
+      <div class="crttitle">
+        <h3 data-text="Campus_Recruitment_Training">Campus_Recruitment_Training</h3>
+      </div>
+    </li>
+    <pre>                               </pre>
+    <li class="nav-item">
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'log' %}"><strong style="width: 100px;"><i class="fas fa-users fa-lg"></i></strong></a>
+      </div>
+    </li> 
+
+      {% elif user.is_superuser %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'main' %}">Main Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'dash' %}">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'job' %}">Job Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'perm' %}">Permissions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'logo' %}">Logout</a>
+      </li>
+      {% elif user.role == 1%}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'main' %}">Main Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'dash' %}">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'perm' %}">Student Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'main' %}">Job Info</a>
+      </li>
+
+      <ul class="navbar-nav ml-auto" style="margin-right: 120px">
+        {% if not user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'log' %}"> Login</a>
+        </li>
+        {% else %}
+        <li class="dropdown">
+          <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown">{{user.username}}</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'cg' %}">change password</a>
+            <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+            <a class="dropdown-item" href="{% url 'logo'%}">Logout</a>
+          </div>
+        </li>
+      {% endif %}
+    </ul>
+    {% elif user.role == 2%}
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'main' %}">Student Main Page</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'dash' %}">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'main' %}">Job Info</a>
+    </li>
+    <ul class="navbar-nav ml-auto" style="margin-right: 120px">
+      <!-- {% if not user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'log' %}"> Login</a>
+      </li>
+      {% else %} -->
+      <li class="dropdown">
+        <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown">{{user.username}}</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{% url 'cg' %}">change password</a>
+          <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+          <a class="dropdown-item" href="{% url 'logo'%}">Logout</a>
+        </div>
+      </li>
+      <!-- {% endif %} -->
+    </ul>
+    {% else %}
+    <pre> </pre>
+    <li class="nav-item">
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'main' %}"><strong style="padding-right: 10px;"><i class="fas fa-home fa-lg"></i></strong></h5></a>
+      </div>
+    </li>
+    <pre>     </pre>
+   <li class="nav-item">
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'request' %}"><strong style="padding-left: 2px;"><i class="fab fa-wpforms fa-lg"></i></strong></h5></a>
+      </div>
+    </li>
+    <pre>   </pre>
+   
+    <pre>                            </pre>
+      <li>
+      <div class="crttitle">
+        <h3 data-text="Campus_Recruitment_Training">Campus_Recruitment_Training</h3>
+      </div>
+    </li>
+    <pre>                                    </pre>
+     <li class="nav-item">
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'logo' %}"><strong style="padding-left: 2px;"><i class="fas fa-sign-out-alt fa-lg"></i></strong></h5></a>
+      </div>
+    </li>
+    {% endif %}
+    </ul>
+  </div>  
+</nav>

@@ -1,0 +1,154 @@
+{% extends 'html/base.html' %}
+{% block title %}Main{% endblock %}
+{% block content %}
+<div class="container mt-5">
+	<div class="jumbotron">
+		{% if user.is_superuser %}
+		<h3>Super User</h3>
+		{% elif user.role == 1%}
+		<h3>Coordinator</h3>
+		{% elif user.role == 2%}
+		<h3>Student</h3>
+		{% else %}
+		<h3>Guest</h3>
+		{% endif %}
+	</div>
+		{% if user.is_superuser %}
+	<!-- 	<div id="accordion">
+		{% for j in t %}
+		<h3>{{j.title}}</h3>
+		<div class="row">
+			<div class="col col-sm">
+				<img class="card-img-top" src="{{j.com_image.url}}" alt="Card image" style="height:40px;width:10%">
+				<p>Loaction : {{j.location}}</p>
+				<p>Salary : {{j.salary}}</p>
+				
+			</div>
+			<div class="col col-sm">
+				<p>Skills Required : {{j.skills}}</p>
+			</div>
+			<p>Job Description : {{j.descrip}}</p>
+			<div class="row">
+				<div class="col col-sm">
+			<a href="{% url 'view' %}" class="btn btn-info text-light col-sm">View</a>
+		</div>
+			</div>
+		</div>
+ {% endfor %}
+</div>
+
+
+
+</div> -->
+<div class="container mt-5">
+		<div class="row">
+			<div class="col col-sm">
+<!-- 				<a href="{% url 'jinfo' %}" class="btn btn-info"><h3>Job info</h3></a>
+ --><div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Co ordinator
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <li><a href="#">CSE</a></li>
+      <li><a href="#">ECE</a></li>
+      <li><a href="#">Civil</a></li>
+      <li><a href="#">Mechanical</a></li>
+      <li><a href="#">EEE</a></li>
+      <li><a href="#">MBA</a></li>
+    </ul>
+  </div>
+ 			</div>
+			<div class="col col-sm">
+			<!-- 	<a href="{% url 'stdinfo' %}" class="btn btn-info"><h3>Student info</h3></a> -->
+			<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Student info
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <li><a href="#">CSE</a></li>
+      <li><a href="#">ECE</a></li>
+      <li><a href="#">Civil</a></li>
+      <li><a href="#">Mechanical</a></li>
+      <li><a href="#">EEE</a></li>
+      <li><a href="#">MBA</a></li>
+    </ul>
+  </div>
+			</div>
+		</div>
+	</div>
+{% elif user.role == 1 %}
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col col-sm">
+				<h3>Job info</h3>
+			</div>
+			<div class="col col-sm">
+				<h3>Student info</h3>
+			</div>
+		</div>
+	</div>
+	<div id="accordion">
+		{% for j in t %}
+		<h3>{{j.title}}</h3>
+		<div class="row">
+			<div class="col col-sm">
+				<img class="card-img-top" src="{{j.com_image.url}}" alt="Card image" style="height:40px;width:10%">
+				<p>Loaction : {{j.location}}</p>
+				<p>Salary : {{j.salary}}</p>
+				
+			</div>
+			<div class="col col-sm">
+				<p>Skills Required : {{j.skills}}</p>
+			</div>
+			<p>Job Description : {{j.descrip}}</p>
+			<div class="row">
+				<div class="col col-sm">
+			<a href="{% url 'view' %}" class="btn btn-info text-light col-sm">View</a>
+		</div>
+			</div>
+		</div>
+ {% endfor %}
+</div>
+
+</div>
+
+	{% elif user.role == 2 %}
+	<div id="accordion">
+		{% for j in t %}
+		<h3>{{j.title}}</h3>
+		<div class="row">
+			<div class="col col-sm">
+				<img class="card-img-top" src="{{j.com_image.url}}" alt="Card image" style="height:40px;width:10%">
+				<p>Loaction : {{j.location}}</p>
+				<p>Salary : {{j.salary}}</p>
+				
+			</div>
+			<div class="col col-sm">
+				<p>Skills Required : {{j.skills}}</p>
+			</div>
+			<p>Job Description : {{j.descrip}}</p>
+			<div class="row">
+				<div class="col col-sm">
+			<a href="{% url 'view' %}" class="btn btn-info text-light col-sm">View</a>
+		</div>
+		<div class="col col-sm">
+			<a href="#" class="btn btn-info text-light col-sm">Apply</a>
+		</div>
+			</div>
+		</div>
+ {% endfor %}
+</div>
+
+</div>
+
+{% else %}
+<h3>No Access to Jobs</h3>
+{% endif %}
+
+</div>
+<script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+{% endblock %}

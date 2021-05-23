@@ -1,0 +1,71 @@
+{% extends 'html/base.html' %}
+{% block title %}View Job{% endblock %}
+{% block content %}
+
+<div class="container">
+	<div class="row">
+	<div class="col-md-4 h-20 mt-4 card shadow-lg">
+		<h3 class="p-2 bg-secondary text-center text-light border rounded my-2">Job info</h3>
+		<img src="{{user.improfile.impf.url}}" height=230px width=100%>
+		<div class="card-body">
+			<h4>Hi {{user.username}}</h4>
+			<div class="row">
+				<div class="col">
+					<a href="{% url 'dash' %}" class="form-control btn btn-info">Back</a>
+				</div>
+				{% if not user.is_superuser %}
+				<div class="col">
+					<a href="#" class="form-control btn btn-info">Apply</a>
+				</div>	
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="col-md-8 mt-4 card shadow-lg">
+		<h3 class="p-2 bg-secondary text-center text-light border rounded my-2">Job Details</h3>
+		<table>
+			<tr>
+				<th>Company</th>
+				<th>{{user.jobinfo.title}}</th>
+			</tr>
+			<tr>
+				<th>Job Role</th>
+				<td>{{user.jobinfo.job_role}}</td>
+			</tr>
+			<tr>
+				<th>Location</th>
+				<th>{{user.jobinfo.location}}</th>
+			</tr>
+			<tr>
+				<th>Salary</th>
+				<td>{{user.jobinfo.salary}}</td>
+			</tr>
+			<tr>
+				<th>Skills Required</th>
+				<td>{{user.jobinfo.skills}}</td>
+			</tr>
+			<tr>
+				<th>Eligible Percentage</th>
+				<td>{{user.jobinfo.eligible_percent}}</td>
+			</tr>
+			<tr>
+				<th>Eligible Streams</th>
+				<td>{{user.jobinfo.eligible_dept}}</td>
+			</tr>
+			<tr>
+				<th>Year of Pass</th>
+				<td>{{user.jobinfo.year_of_pass}}</td>
+			</tr>
+			<tr>
+				<th>Last Date to Apply</th>
+			    <td>{{user.jobinfo.last_date}}</td>
+		    </tr>
+		    <tr>
+		    	<th>Description</th>
+		    	<td>{{user.jobinfo.descrip}}</td>
+		    </tr>
+		</table>
+	</div>
+</div>
+</div>
+{% endblock %}

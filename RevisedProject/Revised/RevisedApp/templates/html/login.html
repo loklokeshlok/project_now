@@ -1,8 +1,32 @@
-{% extends 'html/main.html' %}
-{% block title %} Login {% endblock %}
+{% extends 'html/base.html' %}
+{% block title %}Login{% endblock %}
 {% block content %}
 
-        <div class="full-page">
+<div class = "container">
+  <div class = "card col-md-6 mx-auto mt-5 shadow-lg">
+    <h3 class="text-center bg-info p-2 my-2 border rounded">Login</h3>
+    <div class="card-body">
+		<form method="POST">
+			{% csrf_token %}
+	      <input type="text" name="username" placeholder="Enter your name" class="form-control my-2">
+	      <input type="password" name="password" placeholder=" Enter your password" class="form-control my-2">
+	</div>
+	<div class="row">
+        <div class="col">
+            <input type="submit" value="Login" class="btn btn-success col-sm">  
+        </div>
+        <div class="col">
+           <a href="{% url 'reges' %}" class="btn btn-secondary col-sm">New User</a>           
+        </div>
+      </div>
+
+      </form>
+      <a href="{% url 'reset_password' %}" class="btn btn-danger btn-block my-2 ">Forgot password ?</a>
+  </div>
+	</div>
+</div> --><!-- 
+<div class="loginspace">
+<div class="full-page">
         <div id='login-form'class='login-page'>
             <div class="form-box">
                 <div class='button-box'>
@@ -11,7 +35,7 @@
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
                 <form id='login' class='input-group-login'>
-                    <input type='text'class='input-field'placeholder='Email' required >
+                    <input type='text'class='input-field'placeholder='Email Id / User Name' required >
         <input type='password'class='input-field'placeholder='Enter Password' required>
         <input type='checkbox'class='check-box'><span style="color: #F3C693">Remember Password</span>
         <button type='submit'class='submit-btn'>Log in</button>
@@ -23,7 +47,7 @@
          <input type='email'class='input-field'placeholder='Email Id' name="mail">
          <input type='password'class='input-field'placeholder='Enter Password' >
          <input type='password'class='input-field'placeholder='Confirm Password'  >
-         <input type='checkbox'class='check-box'><span style="color: #F3C693">I agree to the terms and conditions</span>
+         <input type='checkbox'class='check-box'><span style="color: #F3C693">I agree to the terms and conditions</span>x
                     <button class='submit-btn'>Register</button>
            </form>
             </div>
@@ -56,4 +80,5 @@
             }
         }
     </script>
+</div>-->
 {% endblock %}

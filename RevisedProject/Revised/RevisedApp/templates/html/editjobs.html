@@ -1,0 +1,34 @@
+{% extends 'html/base.html' %}
+{% block title %} Job Edit {% endblock %}
+{% block content %}
+
+
+<div class = "container mt-4">
+	<div class="card col-md-6 mx-auto">
+		<div class="card-body">
+		<form method="POST">
+			{% csrf_token %}
+		<h3>Edit jobs</h3>
+		<table class="table table-borderless">
+			{% for m in b %}
+			<tr>
+				<td>{{m}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<div class="row">
+			<div class="col">
+				<input type="submit" value="Update Job" class="from-control btn btn-success my-2">
+				</div>
+			</div>
+		</form>
+			
+	</div>	
+	</div>
+</div>
+<script>
+  $( function() {
+    $("#id_last_date").datepicker();
+  } );
+  </script>
+{% endblock %}

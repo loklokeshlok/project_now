@@ -1,0 +1,17 @@
+{% extends 'html/base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="jumbotron mt-5">
+		<h3>
+			{% if user.is_superuser %}
+			<h3>Admin Dashboard</h3>
+			{% elif user.role == 1%}
+			<h3>Coordinator Dashboard</h3>
+			{% else %}
+			<h3>Student Dashboard</h3>
+		    {% endif %}
+	</div>
+</div>
+
+{% endblock %}
