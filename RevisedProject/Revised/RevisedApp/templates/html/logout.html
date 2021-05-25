@@ -2,13 +2,29 @@
 {% block title %} Logout {% endblock %}
 {% block content %}
 
-<div class="container">
+<!-- <div class="container">
 	<div class="card col-md-6 mx-auto mt-4">
 		<h3 class="bg-primary text-white text center">Logout</h3>
 		<div class="card-body">
 			<h2>Successfully logged out</h2>
 			<h3> You need to login again click here<a href="{% url 'log' %}" class="form-control btn btn-warning"> Proceed </a></h3>
 			
+		</div>
+	</div>
+</div> -->
+
+<div class="lospace">
+	<div class="locontainer">
+		<div class="lobox">
+			<h3 align="center">Successfully logged out...</h3>
+			<hr style="border-top: 3px solid black; padding-right: 30px;">
+			<h5 align="center">You need to login again click here</h5>
+			<div class="scbox">
+				<p></p>
+			</div>
+			<div class="lobtn">
+				<a href="{% url 'log' %}"><button class='submit-btn1'> Proceed to login </button></a>
+			</div>
 		</div>
 	</div>
 </div>

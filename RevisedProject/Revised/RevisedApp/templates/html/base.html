@@ -150,19 +150,20 @@
   height:530px;
   position:relative;
   margin:2% auto;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.8);
   padding:10px;
   overflow: hidden;
   line-height: 1;
 }
+.loginrow .row{
+  padding-top: 200px;
+}
 .button-box
 {
-  width:230px;
+  width:300px;
   height: 40px;
-  margin:35px auto;
+  margin: 50px auto;
   position:relative;
-  box-shadow: 0 0 20px 9px #ff61241f;
-  border-radius: 30px;
 }
 .toggle-btn
 {
@@ -326,7 +327,73 @@ span
   height: 300px; /* Should be removed. Only for demonstration */
 }
 
+.lospace{
+  width: 100%;
+  height: 600px;
+  background: #DBDBDC;
+}
 
+.lospace .locontainer .lobox{
+  width: 400px;
+  height: 400px;
+  background: #53E2C9;
+  float: left;
+  margin: 100px 450px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.lospace .locontainer .lobox h3{
+  padding-top: 50px;
+  font-family: sans-serif;
+  font-weight: 2000px;
+}
+
+.lospace .locontainer .lobox h5{
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 600px;
+}
+
+.lospace .locontainer .lobox .scbox{
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+
+.lospace .locontainer .lobox .scbox p{
+  width: 40px;
+  height: 40px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(43deg);
+  margin: -120px;
+  margin-left: 275px;
+  margin-top: 10px;
+}
+
+.submit-btn1
+{
+  width: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: #3D3D3D;
+  border: 0;
+  outline: none;
+  border-radius: 20px;
+  color: white;
+}
+
+.lospace .locontainer .lobox .lobtn{
+  padding-top: 90px;
+  padding-left: 20px;
+}
+
+.lospace .locontainer .lobox .lobtn a{
+  text-decoration: none;
+}
 
 .abtspace{
   width: 100%;
@@ -431,36 +498,6 @@ span
   outline: none;
   resize: none;
 }
-
-/*.abtcontactform .abtinputbox p{
-  position: absolute;
-  left: 0;
-  padding: 5px 0;
-  font-size: 16px;
-  margin: 10px 0;
-  pointer-events: none;
-  transition: 0.5s;
-  color: #666;
-}
-
-.abtcontactform .abtinputbox input:focus ~ p,
-.abtcontactform .abtinputbox input:valid ~ p,
-.abtcontactform .abtinputbox textarea:focus ~ p,
-.abtcontactform .abtinputbox textarea:valid ~ span{
-  color: #e91e63;
-  font-size: 12px;
-  transform: translateY(-20px);
-}
-
-.abtcontactform .abtinputbox input[type="submit"]{
-  width: 100px;
-  background: #00bcd4;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 18px;
-}*/
 
 .hexspace{
   width: 100%;
