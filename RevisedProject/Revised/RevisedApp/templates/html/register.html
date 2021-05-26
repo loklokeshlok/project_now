@@ -2,7 +2,7 @@
 {% block title %}Register{% endblock %}
 {% block content %}
 
-<div class="container">
+<!-- <div class="container">
 	<div class = "card col-md-6 mx-auto mt-5 shadow-lg">
     <div class="card-body">
 		<form method="POST">
@@ -30,5 +30,35 @@
   </div>
 	</div>
 	
-</div>
+</div> -->
+<div class="registerspace">
+		<div class="full-page">
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <button class='submit-btn'>Register Here...</button>
+                </div>
+                <form id='login' class='input-group-login' method="POST">
+                 {% csrf_token %}
+         <input type='text'class='input-field'placeholder='First Name' name="username" required>
+         <input type='text'class='input-field'placeholder='Last Name ' required>
+         <input type='email'class='input-field'placeholder='Email Id' name="mail" required>
+         <input type='password'class='input-field'placeholder='Enter Password' required>
+         <input type='password'class='input-field'placeholder='Confirm Password'  required>
+         <input type='checkbox'class='check-box'><span style="color: #F3C693">I agree to the terms and conditions</span>
+                    				<div class="row">
+					<div class="col">
+						<a href="{% url 'log' %}" class="form-control btn btn-info col-sm">Existing user</a>
+						</div>
+						<div class="col">
+							<input type="submit" class="form-control btn btn-success col-sm" name="Subscribe">
+						</div>
+					</div>
+     </form>
+     
+            </div>
+        </div>
+    </div>
+    </div>
+
 {% endblock %}

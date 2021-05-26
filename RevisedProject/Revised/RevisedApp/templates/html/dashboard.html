@@ -1,17 +1,174 @@
 {% extends 'html/base.html' %}
+{% load static %}
 {% block title %}Dashboard{% endblock %}
 {% block content %}
-<div class="container">
-	<div class="jumbotron mt-5">
-		<h3>
+
 			{% if user.is_superuser %}
 			<h3>Admin Dashboard</h3>
 			{% elif user.role == 1%}
 			<h3>Coordinator Dashboard</h3>
 			{% else %}
-			<h3>Student Dashboard</h3>
-		    {% endif %}
+			<div class="studentspace">
+			<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 30px;
+	background: #23242b;
+	color: #fff;
+}
+.u-name {
+	font-size: 20px;
+	padding-left: 17px;
+}
+.u-name b {
+	color: #127b8e;
+}
+.header i {
+	font-size: 30px;
+	cursor: pointer;
+	color: #fff;
+}
+.header i:hover {
+	color: #127b8e;
+}
+.user-p {
+	text-align: center;
+	padding-left: 10px;
+	padding-top: 25px;
+}
+.user-p img {
+	width: 100px;
+	border-radius: 50%;
+}
+.user-p h4 {
+	color: #ccc;
+	padding: 5px 0;
+
+}
+.side-bar {
+	width: 250px;
+	background: #262931;
+	min-height: 100vh;
+	transition: 500ms width;
+}
+.body {
+	display: flex;
+}
+.section-1 {
+	width: 100%;
+	color: red;
+}
+.side-bar ul {
+	margin-top: 20px;
+	list-style: none;
+}
+.side-bar ul li {
+	font-size: 16px;
+	padding: 15px 0px;
+	padding-left: 20px;
+	transition: 500ms background;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.side-bar ul li:hover {
+	background: #127b8e;
+}
+.side-bar ul li a {
+	text-decoration: none;
+	color: #eee;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+.side-bar ul li a i {
+	display: inline-block;
+	padding-right: 10px;
+	font-size: 23px;
+}
+#navbtn {
+	display: inline-block;
+	margin-left: 70px;
+	font-size: 20px;
+	transition: 500ms color;
+}
+#checkbox {
+	display: none;
+}
+#checkbox:checked ~ .body .side-bar {
+	width: 60px;
+}
+#checkbox:checked ~ .body .side-bar .user-p{
+	visibility: hidden;
+}
+#checkbox:checked ~ .body .side-bar a span{
+	display: none;
+}
+	</style>
+</head>
+<body>
+	<div class="body">
+		<nav class="side-bar">
+			<div class="user-p">
+				<img src="{% static 'images/123.jpg' %}">
+				<h4>Elias</h4>
+			</div>
+			<ul>
+				<li>
+					<a href="#">
+						<i class="fa fa-desktop" aria-hidden="true"></i>
+						Dashboard
+					</a>
+				</li>
+				<li>
+					<a href="#">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						Message
+					</a>
+				</li>
+				<li>
+					<a href="{% url 'cg' %}">
+						<i class="fa fa-info-circle" aria-hidden="true"></i>
+						Change Password
+					</a>
+				</li>
+				<li>
+					<a href="{% url 'profile' %}">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						Profile
+					</a>
+				</li>
+				<li>
+					<a href="{% url 'logo'%}">
+						<i class="fa fa-power-off" aria-hidden="true"></i>
+						Logout
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="section-1">
+			<h1>
+				This place will added with your code...
+				what u need to place...
+			</h1>
+		</section>
 	</div>
-</div>
+
+</body>
+</html>
+				
+				</div>
+		    {% endif %}
 
 {% endblock %}

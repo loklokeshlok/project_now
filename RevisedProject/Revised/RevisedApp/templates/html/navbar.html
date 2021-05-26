@@ -87,28 +87,32 @@
     </ul>
     {% elif user.role == 2%}
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'main' %}">Student Main Page</a>
-    </li>
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'dash' %}"><strong style="width: 100px; padding-left: 3px; padding-top: 10px;"><i class="fas fa-desktop"></i></strong></a>
+      </div>
+    </li> 
+    <pre>   </pre>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'dash' %}">Dashboard</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'main' %}">Job Info</a>
-    </li>
-    <ul class="navbar-nav ml-auto" style="margin-right: 120px">
+      <div id="login-button">
+        <a class="nav-link glyphicon" href="{% url 'main' %}"><strong style="width: 100px; padding-left: 3px; padding-top: 10px;">    <i class="fas fa-scroll"></i></strong></a>
+      </div>
+    </li> 
+    <pre>  </pre>
+    <ul class="navbar-nav ml-auto">
       <!-- {% if not user.is_authenticated %}
       <li class="nav-item">
         <a class="nav-link" href="{% url 'log' %}"> Login</a>
       </li>
       {% else %} -->
-      <li class="dropdown">
-        <a type="button" class="nav-link dropdown-toggle" data-toggle="dropdown">{{user.username}}</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="{% url 'cg' %}">change password</a>
-          <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-          <a class="dropdown-item" href="{% url 'logo'%}">Logout</a>
-        </div>
-      </li>
+      <pre>                                  </pre>
+      <div class="crttitle">
+        <h3 data-text="Campus_Recruitment_Training">Campus_Recruitment_Training</h3>
+      </div>
+      <pre>                    </pre>
+      <a class="nav-link glyphicon"><strong style="width: 100px; padding-left: 3px; padding-top: 10px;">    <i class="fas fa-arrow-right"></i></strong></a>
+      <div class="studentname">
+        <h5>{{user.username}}</h5>
+      </div>
       <!-- {% endif %} -->
     </ul>
     {% else %}
