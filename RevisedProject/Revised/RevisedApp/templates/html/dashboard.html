@@ -4,7 +4,47 @@
 {% block content %}
 
 			{% if user.is_superuser %}
-			<h3>Admin Dashboard</h3>
+			<div class="admininfospace">
+				<br>
+			<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+<script>
+    $(document).ready(function() {
+        var ctx = $("#chart-line");
+        var myLineChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['CSE','ECE','EEE','Civil','Mech'],
+                datasets: [{
+                    data: [150, 140, 30, 40, 88], 
+                    label: "Selected Info",
+                    borderColor: "green",
+                    backgroundColor: 'green',
+                    fill: false
+                },{
+                    data: [30, 40, 40, 50, 92, 180],
+                    label: "Non - Selected Info",
+                    borderColor: "red",
+                    fill: false,
+                    backgroundColor: 'red'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Dept wise hired info'
+                }
+            }
+        });
+    });
+</script>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card">
+                        <div class="card-body" style="height: 280px">
+                          	<canvas id="chart-line" width="299" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+</div>
 			{% elif user.role == 1%}
 			<h3>Coordinator Dashboard</h3>
 			{% else %}
