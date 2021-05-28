@@ -1,18 +1,252 @@
 {% extends 'html/base.html' %}
+{% load static %}
 {% block title %}Main{% endblock %}
 {% block content %}
-<div class="container mt-5">
-	<div class="jumbotron">
 		{% if user.is_superuser %}
 		<h3>Super User</h3>
 		{% elif user.role == 1%}
 		<h3>Coordinator</h3>
 		{% elif user.role == 2%}
-		<h3>Student</h3>
+				<div class="studentspace">
+			<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.u-name {
+	font-size: 20px;
+	padding-left: 17px;
+}
+.u-name b {
+	color: #127b8e;
+}
+.header i {
+	font-size: 30px;
+	cursor: pointer;
+	color: #fff;
+}
+.header i:hover {
+	color: #127b8e;
+}
+.user-p {
+	text-align: center;
+	padding-left: 10px;
+	padding-top: 25px;
+}
+.user-p img {
+	width: 100px;
+	border-radius: 50%;
+}
+.user-p h4 {
+	color: #ccc;
+	padding: 5px 0;
+
+}
+.side-bar {
+	width: 250px;
+	background: #262931;
+	min-height: 100vh;
+	transition: 500ms width;
+}
+.body {
+	display: flex;
+}
+.section-1 {
+	width: 100%;
+	color: red;
+}
+.side-bar ul {
+	margin-top: 20px;
+	list-style: none;
+}
+.side-bar ul li {
+	font-size: 16px;
+	padding: 15px 0px;
+	padding-left: 20px;
+	transition: 500ms background;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.side-bar ul li:hover {
+	background: #127b8e;
+}
+.side-bar ul li a {
+	text-decoration: none;
+	color: #eee;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+.side-bar ul li a i {
+	display: inline-block;
+	padding-right: 10px;
+	font-size: 23px;
+}
+#navbtn {
+	display: inline-block;
+	margin-left: 70px;
+	font-size: 20px;
+	transition: 500ms color;
+}
+#checkbox {
+	display: none;
+}
+#checkbox:checked ~ .body .side-bar {
+	width: 60px;
+}
+#checkbox:checked ~ .body .side-bar .user-p{
+	visibility: hidden;
+}
+#checkbox:checked ~ .body .side-bar a span{
+	display: none;
+}
+
+	</style>
+</head>
+<body>	
+<input type="checkbox" id="checkbox">	
+	<div class="body">
+		<nav class="side-bar">
+			<header class="header">
+				<label for="checkbox">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</label>
+			</header>
+			<div class="user-p">
+				<img src="{% static 'images/123.jpg' %}">
+				<h4>Elias</h4>
+			</div>
+
+			<ul>
+				<li>
+					<a href="#">
+						<i class="fa fa-desktop" aria-hidden="true"></i>
+						Dashboard
+					</a>
+				</li>
+				<li>
+					<a href="#">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						Message
+					</a>
+				</li>
+				<li>
+					<a href="{% url 'cg' %}">
+						<i class="fa fa-info-circle" aria-hidden="true"></i>
+						Change Password
+					</a>
+				</li>
+				<li>
+					<a href="{% url 'profile' %}">
+						<i class="fa fa-cog" aria-hidden="true"></i>
+						Profile
+					</a>
+				</li>
+				<li>
+					<a href="{% url 'logo'%}">
+						<i class="fa fa-power-off" aria-hidden="true"></i>
+						Logout
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="section-1">
+			<p>
+				hope everything going right...
+			</p>
+			
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style type="text/css">
+      
+body{
+  font-family: sans-serif;
+}
+
+.xyz{
+  /*position: absolute;
+  top: 40%;
+  left: 40%;*/
+  padding-left: 100px;
+}
+
+.card1{
+  height: 200px;
+  background-color: white;
+}
+
+
+#cont1:after{
+  content: attr(data-pct)"%";
+  font-size: 2em;
+}
+
+#svg1 circle{
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #ecf0f1;
+  stroke-width: 0.6em;
+
+
+}
+
+#svg1 #bar1{
+  stroke: green;
+}
+
+    </style>
+    
+  </head>
+  <body>
+  <div class="xyz">
+    <div class="wrapper1">
+      <div class="container1">
+        <div class="card1">
+          <div id="cont1">
+            <svg id="svg1" width="200" height="200">
+              <circle r="90" cx="100" cy="100" fill="transparent"></circle>
+              <circle id="bar1" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var val = {{ a.a }}
+    var $circle = $('#svg1 #bar1');
+    var r = $circle.attr('r');
+    var c = Math.PI*(r*2);
+              
+    if (val < 0) { val = 0;}
+    if (val > 100) { val = 100;}
+                
+    var pct = ((100-val)/100)*c;
+                
+        $circle.css({ strokeDashoffset: pct});
+               
+        $('#cont1').attr('data-pct',val);
+  </script>
+</body>
+</html>
+		</section>
+	</div>
+
+</body>
+</html>
+				
+				</div>
 		{% else %}
 		<h3>Guest</h3>
 		{% endif %}
-	</div>
 		{% if user.is_superuser %}
 	<!-- 	<div id="accordion">
 		{% for j in t %}
@@ -110,7 +344,6 @@
  {% endfor %}
 </div>
 
-</div>
 
 	{% elif user.role == 2 %}
 	<div id="accordion">
