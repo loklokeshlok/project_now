@@ -45,6 +45,7 @@
                     </div>
                 </div>
 </div>
+
 			{% elif user.role == 1%}
 			<h3>Coordinator Dashboard</h3>
 			{% else %}
@@ -198,11 +199,86 @@
 			</ul>
 		</nav>
 		<section class="section-1">
+			<p>
+				hope everything going right...
+			</p>
+			
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style type="text/css">
+      
+body{
+  font-family: sans-serif;
+}
 
-			<h1>
-				This place will added with your code...
-				what u need to place...
-			</h1>
+.xyz{
+  /*position: absolute;
+  top: 40%;
+  left: 40%;*/
+  padding-left: 100px;
+}
+
+.card1{
+  height: 200px;
+  background-color: white;
+}
+
+
+#cont1:after{
+  content: attr(data-pct)"%";
+  font-size: 2em;
+}
+
+#svg1 circle{
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #ecf0f1;
+  stroke-width: 0.6em;
+
+
+}
+
+#svg1 #bar1{
+  stroke: green;
+}
+
+    </style>
+    
+  </head>
+  <body>
+  <div class="xyz">
+    <div class="wrapper1">
+      <div class="container1">
+        <div class="card1">
+          <div id="cont1">
+            <svg id="svg1" width="200" height="200">
+              <circle r="90" cx="100" cy="100" fill="transparent"></circle>
+              <circle id="bar1" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var val = {{ a.a }}
+    var $circle = $('#svg1 #bar1');
+    var r = $circle.attr('r');
+    var c = Math.PI*(r*2);
+              
+    if (val < 0) { val = 0;}
+    if (val > 100) { val = 100;}
+                
+    var pct = ((100-val)/100)*c;
+                
+        $circle.css({ strokeDashoffset: pct});
+               
+        $('#cont1').attr('data-pct',val);
+  </script>
+</body>
+</html>
 		</section>
 	</div>
 

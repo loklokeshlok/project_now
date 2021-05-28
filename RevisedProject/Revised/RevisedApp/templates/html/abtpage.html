@@ -29,25 +29,25 @@
 			</div>
 		</div>	
 		<div class="abtcontactform">
-			<form>
-				<h2>Send Message</h2>
-				<div class="abtinputbox">
-					<p>Full Name</p>
-					<input type="text" name="" required="required">
-				</div>
-				<br>
-				<div class="abtinputbox">
-					<p>Email</p>
-					<input type="text" name="" required="required">
-				</div>
-				<br>
-				<div class="abtinputbox">
-					<p>Type your Message...</p>
-					<textarea required="required"></textarea>
-				</div>
-				<div class="abtinputbox">
-					<input type="submit" name="" value="Send">
-				</div>
+			<form method="POST">
+				{% csrf_token %}
+				<h2 align="center" style="padding-bottom: 15px; line-height: 1em; font-style: italic; color: blue;">Send Message</h2>
+				<div>
+					<label for="name" class="">Your name</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <hr>
+				<div>
+					<label for="mail" class="">Email</label>
+                    <input type="text" id="mail" class="form-control">
+                </div>
+                <hr>
+				<div>
+					<label for="subject" class="">Subject</label>
+                    <input type="text" id="subject" class="form-control">
+                </div>
+                <hr>
+                <input type="submit" value="click" class="btn btn-success col-sm">
 			</form>
 		</div>	
 	</div>

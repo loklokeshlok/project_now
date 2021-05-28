@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from RevisedApp.forms import UsForm,Usperm,Jobform,UpJobform,UtupForm,ChpwdForm
 from django.core.mail import EmailMessage
 from Revised import settings
+from datetime import date
 from RevisedApp.models import User,Jobinfo
 
 # Create your views here.
@@ -13,8 +14,9 @@ def abtpage(self):
 	return render(self,'html/abtpage.html')
 
 def  ach(self):
-	
-	return render(self,'html/ach.html')
+	todays_date = date.today()
+	y = {'1':todays_date.year-1,'2':todays_date.year-2,'3':todays_date.year-3,'4':todays_date.year-4,'5':todays_date.year-5}
+	return render(self,'html/ach.html',{'y':y})
 
 def register(request):
 	if request.method=="POST":
@@ -61,7 +63,8 @@ def gvper(request,k):
 	return render(request,'html/gvp.html',{'y':k2})
 
 def dashboard(request):
-	return render(request,'html/dashboard.html')
+	a = {'a':50}
+	return render(request,'html/dashboard.html',{'a':a})
 
 def jobposts(request):
 	w = Jobinfo.objects.all()
