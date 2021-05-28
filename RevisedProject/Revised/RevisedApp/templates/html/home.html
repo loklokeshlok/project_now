@@ -1,12 +1,142 @@
 {% extends 'html/base.html' %}
+{% load static %}
 {% block title %} Home {% endblock %}
 {% block content %}
 
-<div class="homespace">
-<p class="subtitle fancy">Placements</p>
+
+<div class="slides">
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>College plcement</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "campus/fonts/icomoon/style.css" %}">
+    <link rel="stylesheet" href="{% static "campus/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "campus/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "campus/css/style.css" %}">
+
+  </head>
+  <body>
+
+    
+    <div class="site-section block-15">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+            <h1>WELCOME TO THE PLACEMENT  PORTAL</h1>
+
+            <h2>VISITING COMPANIES</h2>
+          </div>
+        </div>
+      
+
+
+<div class="nonloop-block-15 owl-carousel">
+  <div class="media-with-text">
+    <div class="img-border-sm mb-4">
+      <a href="https://www.amazon.com/" class="image-play">
+        <img src="{% static "campus/images/amazon.jpg" %}" alt="" class="img-fluid" style="height: 100%;">
+      </a>
+    </div>
+    <h2 class="heading mb-0 h5"><a href="https://www.amazon.com/">Amazon</a></h2>
+
+    <p style="color:black;">Amazon.com, Inc. is an American multinational technology company based in Seattle, Washington, which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.</p>
+  </div>
+
+  <div class="media-with-text">
+    <div class="img-border-sm mb-4">
+      <a href="https://www.google.com/" class="image-play">
+
+        <img src="{% static "campus/images/google.jpg" %}" alt="" class="img-fluid" height="200px;">
+      </a>
+    </div>
+
+      <br>
+    <h2 class="heading mb-0 h5"><a href="https://www.google.com/">Google</a></h2>
+
+    <p style="color:black;">Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.</p>
+  </div>
+
+  <div class="media-with-text">
+    <div class="img-border-sm mb-4">
+      <a href="https://www.flipkart.com/" class="image-play">
+        <img src="{% static "campus/images/flipkart.jpg" %}" alt="" class="img-fluid" style="height: 155px;">
+      </a>
+    </div>
+      <br>
+        <br>
+    <h2 class="heading mb-0 h5"><a href="https://www.flipkart.com/">Flipkart</a></h2>
+    <p style="color:black;">Flipkart is an Indian e-commerce company, headquartered in Bangalore, Karnataka, India, and incorporated in Singapore as a private limited company.</p>
+  </div>
+
+  <div class="media-with-text">
+    <div class="img-border-sm mb-4">
+      <a href="https://www.samsung.com/" class="image-play">
+        <img src="{% static "campus/images/samsung.jpg" %}" alt="" class="img-fluid" style="height: 210px;">
+      </a>
+    </div>
+    <h2 class="heading mb-0 h5"><a href="https://www.samsung.com/">samsung</a></h2>
+    <p style="color:black;">The Samsung Group is a South Korean multinational conglomerate headquartered in Samsung Town, Seoul. </p>
+  </div>
+
+  <div class="media-with-text">
+    <div class="img-border-sm mb-4">
+      <a href="https://www.microsoft.com/" class="image-play">
+        <img src="{% static "campus/images/Microsoft.jpg" %}" alt="" class="img-fluid" style="height: 210px;">
+      </a>
+    </div>
+    <h2 class="heading mb-0 h5"><a href="https://www.microsoft.com/">Microsoft</a></h2>
+    <p style="color:black;">Microsoft Corporation is an American multinational technology company with headquarters in Redmond, Washington. It develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.</p>
+  </div>
+
+  <div class="media-with-text">
+    <div class="img-border-sm mb-4">
+      <a href="https://www.nutanix.com/" class="image-play">
+        <img src="{% static "campus/images/nutanix.jpeg" %}" alt="" class="img-fluid" style="height:210px;">
+      </a>
+    </div>
+    <h2 class="heading mb-0 h5"><a href="https://www.nutanix.com/">Nutanix</a></h2>
+      <p style="color:black;">Test Drive Nutanix Hyperconverged Infrastructure—No Hardware, No Setup, No Cost. Discover the Benefits of All-in-One Compute, Storage, Network, & Virtualization. Data Protection. Server & Storage Resource. Hyperconvergence Leader. Fastest Time To Value.</p>
+  </div>
+
+  <div class="media-with-text">
+    <div class="img-border-sm mb-4">
+      <a href="https://www.nvidia.com/" class="image-play">
+        <img src="{% static "campus/images/nvidia.jpg" %}"  alt="" class="img-fluid" style="height: 210px;">
+      </a>
+    </div>
+    <h2 class="heading mb-0 h5"><a href="https://www.nvidia.com/">Nvidia</a></h2>
+    <p style="color:black;">Nvidia Corporation is an American multinational technology company incorporated in Delaware and based in Santa Clara, California. It designs graphics processing units for the gaming and professional markets, as well as system on a chip units for the mobile computing and automotive market.</p>
+  </div>
+  
+</div>
+
+</div>
+</div>
+    
+  <script src="{% static "campus/js/jquery-3.3.1.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery-ui.js" %}"></script>
+  <script src="{% static "campus/js/popper.min.js" %}"></script>
+  <script src="{% static "campus/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "campus/js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery.countdown.min.js" %}"></script>
+  <script src="{% static "campus/js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "campus/js/bootstrap-datepicker.min.js" %}"></script>
+  <script src="{% static "campus/js/aos.js" %}"></script>
+  <script src="{% static "campus/js/mediaelement-and-player.min.js" %}"></script>
+
+  <script src="{% static "campus/js/main.js" %}"></script>
+  </body>
+</html>
 <hr style="border-top: 3px solid #7CEADC; padding-right: 30px;" width="1200px;">
-<p style="padding-left: 15px; padding-right: 15px;font-size: 18px;">With expanding the role of business globally, AITS is the place which comes to the minds of the recruiters once the placement season starts. As far as, Annamacharya Group of Institutions is considered, we focus not only on the career-oriented growth but also offer versatility. There has been a consistent growth in our placements record. Today, graduating does not mean getting a degree certificate alone but equipping one with in-depth knowledge of the subject. It has also become mandatory that the student instills both technical and soft skills within him in order to reach heights. AITS helps the students to achieve this by conducting various workshops, guest lectures and seminars and also by letting them participate in various other extra-curricular activities. We are passionate towards grooming the students not only as the efficient professionals but also as the responsible citizens. At AITS, it is our incessant endeavour to make all our students industry-ready.</p>
-<hr style="border-top: 3px solid #7CEADC; padding-right: 30px;" width="1200px;">
+
 <div class="space">
 
 
@@ -14,8 +144,8 @@
 	<div class="homerow1">
   <div class="homecolumn1">
 
-  	<p style="padding-top: 40px; padding-left: 100px;padding-right: 100px;font-size: 17px;">
-  		Alice's Adventures Under Ground is a "facsimile" (shortened) version, the original manuscript and illustrations Charles Dodgson finished in 1864 for his friend, Alice Liddell, later published as the iconic fantasy novel for all ages, The Adventures of Alice in Wonderland (1865), using the pseudonym, Lewis Carroll. These original illustrations and handwritten texts are a real treasure, and remained in Liddell's possession until 1928, when she sold them at auction to pay her husband's debts. Purchased by an American art dealer and sold again, the manuscript was purchased by British benefactors in 1946 who donated it to the British people, installed at The British Museum in 1948, commemorating the end of World War II. [The photo of Alice Dodgson included in the manuscript (below) was not unveiled to the public until 1977.]
+  	<p style="padding-top: 90px; padding-left: 100px;padding-right: 100px;font-size: 17px; color: black; font-size: 20px;">
+  		An important part of the mission of the Institute is to improve the quality of the graduate student experience. To that end, we spend a considerable amount of time talking with students about their goals, concerns, and suggestions for improving their experience. 
   	</p>
 
   </div>
@@ -56,8 +186,8 @@
   </div>
   <div class="homecolumn1">
 
-  	<p style="padding-top: 70px;">
-  		Alice's Adventures Under Ground is a "facsimile" (shortened) version, the original manuscript and illustrations Charles Dodgson finished in 1864 for his friend, Alice Liddell, later published as the iconic fantasy novel for all ages, The Adventures of Alice in Wonderland (1865), using the pseudonym, Lewis Carroll. These original illustrations and handwritten texts are a real treasure, and remained in Liddell's possession until 1928, when she sold them at auction to pay her husband's debts. Purchased by an American art dealer and sold again, the manuscript was purchased by British benefactors in 1946 who donated it to the British people, installed at The British Museum in 1948, commemorating the end of World War II. [The photo of Alice Dodgson included in the manuscript (below) was not unveiled to the public until 1977.]
+  	<p style="padding-top: 70px; padding-left: 100px;padding-right: 100px;font-size: 17px; color: black;font-size: 20px;">
+  		The interview process is a multi-stage process for hiring new employees. The interview process typically includes the following steps: writing a job description, posting a job, scheduling interviews, conducting preliminary interviews, conducting in-person interviews, following up with candidates and making a hire.
   	</p>
 
   </div>
@@ -71,9 +201,9 @@
 
 <div class="homerow1">
   <div class="homecolumn1">
-
-  	<p style="padding-top: 70px;">
-  		Alice's Adventures Under Ground is a "facsimile" (shortened) version, the original manuscript and illustrations Charles Dodgson finished in 1864 for his friend, Alice Liddell, later published as the iconic fantasy novel for all ages, The Adventures of Alice in Wonderland (1865), using the pseudonym, Lewis Carroll. These original illustrations and handwritten texts are a real treasure, and remained in Liddell's possession until 1928, when she sold them at auction to pay her husband's debts. Purchased by an American art dealer and sold again, the manuscript was purchased by British benefactors in 1946 who donated it to the British people, installed at The British Museum in 1948, commemorating the end of World War II. [The photo of Alice Dodgson included in the manuscript (below) was not unveiled to the public until 1977.]
+	<p style="padding-top: 40px; padding-left: 100px;padding-right: 100px;font-size: 17px; color: black;font-size: 20px;">	
+  
+  		The study was conducted to identify the factor that affects the job selection preference of undergraduate accounting faculty students in University towards selecting their first job during recruitment. The independent variables that have been chosen in this study are career development, salary and benefits, employer reputation, working environment and job security. 120 undergraduate accounting students were selected to identify the job selection and preference.
   	</p>
 
   </div>
@@ -117,8 +247,8 @@
   </div>
   <div class="homecolumn1">
 
-  	<p style="padding-top: 70px;">
-  		Alice's Adventures Under Ground is a "facsimile" (shortened) version, the original manuscript and illustrations Charles Dodgson finished in 1864 for his friend, Alice Liddell, later published as the iconic fantasy novel for all ages, The Adventures of Alice in Wonderland (1865), using the pseudonym, Lewis Carroll. These original illustrations and handwritten texts are a real treasure, and remained in Liddell's possession until 1928, when she sold them at auction to pay her husband's debts. Purchased by an American art dealer and sold again, the manuscript was purchased by British benefactors in 1946 who donated it to the British people, installed at The British Museum in 1948, commemorating the end of World War II. [The photo of Alice Dodgson included in the manuscript (below) was not unveiled to the public until 1977.]
+  	<p style="padding-top: 70px; padding-left: 100px;padding-right: 100px;font-size: 17px; color: black;font-size: 20px;">
+  		An aptitude test is a way for employers to assess a candidate's abilities through a variety of different testing formats. Aptitude tests will test your ability to perform tasks and react to situations at work. This includes problem-solving, prioritisation and numerical skills, amongst other things.
   	</p>
 
   </div>
@@ -151,8 +281,8 @@
 	<div class="homerow1">
   <div class="homecolumn1">
 
-  	<p style="padding-top: 70px;">
-  		Alice's Adventures Under Ground is a "facsimile" (shortened) version, the original manuscript and illustrations Charles Dodgson finished in 1864 for his friend, Alice Liddell, later published as the iconic fantasy novel for all ages, The Adventures of Alice in Wonderland (1865), using the pseudonym, Lewis Carroll. These original illustrations and handwritten texts are a real treasure, and remained in Liddell's possession until 1928, when she sold them at auction to pay her husband's debts. Purchased by an American art dealer and sold again, the manuscript was purchased by British benefactors in 1946 who donated it to the British people, installed at The British Museum in 1948, commemorating the end of World War II. [The photo of Alice Dodgson included in the manuscript (below) was not unveiled to the public until 1977.]
+  	<p style="padding-top: 70px; padding-left: 100px;padding-right: 100px;font-size: 17px; color: black;font-size: 20px;">
+  		Pre-Placement Talks are given by the company participating in the placement process. It generally includes a detailed presentation that provides applicants with an overview about the company, its policies, hierarchy, recruitment process, career growth, job location, positions and salaries offered.
   	</p>
 
   </div>
@@ -202,8 +332,8 @@
   </div>
   <div class="homecolumn1">
 
-  	<p style="padding-top: 70px;">
-  		Alice's Adventures Under Ground is a "facsimile" (shortened) version, the original manuscript and illustrations Charles Dodgson finished in 1864 for his friend, Alice Liddell, later published as the iconic fantasy novel for all ages, The Adventures of Alice in Wonderland (1865), using the pseudonym, Lewis Carroll. These original illustrations and handwritten texts are a real treasure, and remained in Liddell's possession until 1928, when she sold them at auction to pay her husband's debts. Purchased by an American art dealer and sold again, the manuscript was purchased by British benefactors in 1946 who donated it to the British people, installed at The British Museum in 1948, commemorating the end of World War II. [The photo of Alice Dodgson included in the manuscript (below) was not unveiled to the public until 1977.]
+  	<p style="padding-top: 70px; padding-left: 100px;padding-right: 100px;font-size: 17px; color: black;font-size: 20px;">
+  		A hiring manager's guide to mastering the art of the offer letter: from verbal ... will be no question whether they will take the offer or not at the end for the process. ... For some, this means an immediate return to the grindstone to fill the next role.
   	</p>
 
   </div>
@@ -217,8 +347,8 @@
 <div class="homerow1">
   <div class="homecolumn1">
 
-  	<p style="padding-top: 70px;">
-  		Alice's Adventures Under Ground is a "facsimile" (shortened) version, the original manuscript and illustrations Charles Dodgson finished in 1864 for his friend, Alice Liddell, later published as the iconic fantasy novel for all ages, The Adventures of Alice in Wonderland (1865), using the pseudonym, Lewis Carroll. These original illustrations and handwritten texts are a real treasure, and remained in Liddell's possession until 1928, when she sold them at auction to pay her husband's debts. Purchased by an American art dealer and sold again, the manuscript was purchased by British benefactors in 1946 who donated it to the British people, installed at The British Museum in 1948, commemorating the end of World War II. [The photo of Alice Dodgson included in the manuscript (below) was not unveiled to the public until 1977.]
+  	<p style="padding-top: 70px; padding-left: 100px;padding-right: 100px;font-size: 17px; color: black;font-size: 20px;">
+  		Success (the opposite of failure) is the status of having achieved and accomplished an aim or objective. Being successful means the achievement of desired visions and planned goals. ... The dictionary describes success as the following: “attaining wealth, prosperity and/or fame”.
   	</p>
 
   </div>
@@ -244,6 +374,65 @@
 		.
 	</div>
 </div>
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="footer-heading mb-4 text-white">About</h3>
+            <p>Annamacharya Institute of Technology & Sciences, Tirupati (AITS-T) was established in the year 2007, with a belief that education can influence and mould young minds. Within a decade, AITS, Tirupati received the prestigious stature of an institution with quality education.</p>
+            <p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>
+          </div>
+          <div class="col-md-5">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#">About</a></li>
+                    <li><a href="http://127.0.0.1:8000/">Homepage</a></li>
+                    <li><a href="#">Companies</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="https://www.iitbhu.ac.in">AITS-Tpt</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-5">
+                <h3 class="footer-heading mb-4 text-white">Categories</h3>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Full Time</a></li>
+                    <li><a href="#">Freelance</a></li>
+                    <li><a href="#">Temporary</a></li>
+                    <li><a href="#">Internship</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-3">
+            <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Social Icons</h3></div>
+              <div class="col-md-12">
+                <p>
+                  <a href="https://www.facebook.com/tpc.iitbhu/" class="pb-2 pr-2 pl-0"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/iitbhu_varanasi?lang=en" class="p-2"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/technexiitbhu/?hl=en" class="p-2"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.youtube.com/channel/UClQf58OQvm6OkGbQARqqhMg" class="p-2"><i class="fab fa-youtube"></i></a>
+
+                </p>
+              </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | placement cell AITS Tpt
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
 </div>
+
 {% endblock %}
 
