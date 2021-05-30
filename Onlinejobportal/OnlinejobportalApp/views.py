@@ -8,7 +8,21 @@ def index(request):
 	return render(request,'html/index.html')
 
 def admin_login(request):
-	return render(request,'html/admin_login.html')
+	error = ""
+	if request.method=='POST':
+		u = request.POST['uname']
+		p = request.POST['pwd']
+		user = authenticate(username=u,password=p)
+		try:
+			if user.is_staf:
+				login(request,user)
+				error="no"
+			else:
+				error="yes"
+		except:
+			error="yes"
+	d = {'error':error}
+	return render(request,'html/admin_login.html',d)
 
 def user_login(request):
     error=""
