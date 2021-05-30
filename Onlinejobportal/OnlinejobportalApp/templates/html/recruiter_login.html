@@ -1,0 +1,34 @@
+{% load static %}
+
+{% block body %}
+
+{% include 'html/navbar.html' %}
+<marquee style="font-family: 'Algerian'; font-size: 25px; color: darkcyan; background-color: black;font-weight: bold;margin-top: 1%">
+	Recruiter Login
+</marquee>
+<hr>
+<form class="container mt-5" method="POST">
+	{% csrf_token %}
+	<label><b>Email Id</b></label>
+	<input type="text" class="form-control" name="uname" placeholder="Enter Email">
+	<label><b>Password</b></label>
+	<input type="password" class="form-control" name="pwd" placeholder="Enter password">
+	<input type="submit" class= "btn btn-primary" style="margin-top: 2%;color: darkcyan;background-color: black ; height: 40px; font-size: 20px" >
+	<a href={% url 'recruiter_signup' %} class = "btn btn-primary" style="margin-top:2%; color:darkcyan; background:black; height:40px;">Create an Account</a>
+</form>
+
+{% ifequal error "no" %}
+<script>
+
+    alert("Login Successfully");
+    window.location = ('{% url 'recruiter_home' %}') 
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+    alert("Invalid login Credentials ,Try Again...");
+</script>
+{% endifequal %}
+
+{% endblock %}
